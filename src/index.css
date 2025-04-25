@@ -1,0 +1,67 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.controls,
+.form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex: 1 1 200px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fcc;
+}
+
+button.acknowledged {
+  background-color: #4caf50;
+}
+
+button.unacknowledged {
+  background-color: #f39c12;
+}
+
+.incident-list {
+  list-style: none;
+  padding: 0;
+}
+
+.incident {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.incident:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  margin-top: 0.5rem;
+  color: #333;
+}

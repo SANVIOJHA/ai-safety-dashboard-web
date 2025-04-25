@@ -1,0 +1,98 @@
+/* App.css */
+
+/* Basic reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f8fc;
+  overflow-x: hidden;
+}
+
+/* Container setup */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background banner image */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('src/assets/banner.png'); /* Corrected path */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%) blur(8px); /* Dark + blur effect */
+  z-index: -1;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Controls and form sections */
+.controls, .form {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.incident-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.incident {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.incident:hover {
+  transform: translateY(-5px);
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #eef2f5;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #d1e2f2;
+  transform: scale(1.1);
+}
